@@ -47,7 +47,7 @@ export default function Weather() {
 
     try {
       const response = await fetch(
-        `http://api.weatherapi.com/v1/current.json?key=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&q=${location}`
+        `https://api.weatherapi.com/v1/current.json?key=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&q=${location}`
       );
       if (!response.ok) throw new Error("City not found");
       const data = await response.json();
